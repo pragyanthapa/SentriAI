@@ -5,7 +5,7 @@
 
 Built for **Amadeus Genesis Hack** • Target: **Top 3 Ideathon ($15K)** + **Arweave Bonus ($5K)**
 
-**Live URL:** (will deploy soon)
+**Live URL:** (https://sentri-ai-hazel.vercel.app/)
 
 ---
 
@@ -225,7 +225,7 @@ With **$2B in institutional capital** currently blocked from DeFi, SentriAI addr
 
 ## 🎬 Live Demo
 
-**Try it now:** [/demo](will deploy soon)
+**Try it now:** [/demo](https://sentri-ai-hazel.vercel.app/)
 
 ### How It Works
 
@@ -253,7 +253,7 @@ Try any Ethereum address. Scores are computed deterministically:
 **Note:** Demo wallet suggestions (0xSAFE1abc, 0xWARN3ghi, 0xRISK2def) are just examples—any valid address works!
 
 ### Dashboard
-**View metrics:** [/dashboard](will deploy soon)
+**View metrics:** [/dashboard](https://sentri-ai-hazel.vercel.app/dashboard)
 
 - Real-time compliance statistics
 - Recent wallet screenings
@@ -499,7 +499,7 @@ MIT
 
 Built for **Amadeus Genesis Hack** by Pragyan Thapa.
 
-**Live URL:** [will deploy soon]
+**Live URL:** [https://sentri-ai-hazel.vercel.app/]
 
 **GitHub:** [https://github.com/pragyanthapa/SentriAI]
 
