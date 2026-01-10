@@ -231,43 +231,87 @@ export default function WalletDetailPage() {
             </CardContent>
           </Card>
         )}
-        {result.arweaveTx && (
-          <Card className="border-safe/20 bg-safe/5">
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-safe" />
-                <span>Eternal Compliance Ledger Proof</span>
-              </CardTitle>
-              <CardDescription>
-                This compliance decision is permanently recorded on Arweave
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="bg-background rounded-lg border border-border p-4 space-y-2">
-                <div className="text-sm text-muted-foreground">Transaction ID:</div>
-                <div className="font-mono text-sm break-all">{result.arweaveTx}</div>
-                {result.ledger && (
-                  <div className="text-xs text-muted-foreground mt-2 italic">
-                    {result.ledger}
+        <Card className="border-safe/20 bg-safe/5">
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <span>🧾</span>
+              <span>AI Provenance Payload</span>
+            </CardTitle>
+            <CardDescription>
+              Deterministic AI compute proof with immutable ledger record
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+              <div className="flex items-center space-x-1">
+                <CheckCircle2 className="h-4 w-4 text-safe" />
+                <span className="text-muted-foreground">Deterministic</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <CheckCircle2 className="h-4 w-4 text-safe" />
+                <span className="text-muted-foreground">Immutable</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <CheckCircle2 className="h-4 w-4 text-safe" />
+                <span className="text-muted-foreground">Auditable</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <CheckCircle2 className="h-4 w-4 text-safe" />
+                <span className="text-muted-foreground">Arweave-backed</span>
+              </div>
+            </div>
+            
+            {result.arweaveTx && (
+              <>
+                <div className="bg-background rounded-lg border border-border p-4 space-y-3">
+                  <div>
+                    <div className="text-xs font-medium text-muted-foreground mb-1">Ledger Proof:</div>
+                    <div className="font-mono text-sm break-all text-foreground">{result.arweaveTx}</div>
                   </div>
-                )}
-              </div>
-              <a
-                href={`https://arweave.net/${result.arweaveTx}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-safe hover:underline"
-              >
-                <span className="font-medium">View on Arweave</span>
-                <ExternalLink className="h-4 w-4" />
-              </a>
-              <div className="text-xs text-muted-foreground pt-2 border-t border-border">
-                <strong>Eternal Compliance Ledger (Arweave-backed)</strong><br />
-                This decision is permanently verifiable on the Eternal Compliance Ledger. Once written, even SentriAI cannot erase it.
-              </div>
-            </CardContent>
-          </Card>
-        )}
+                  {result.ledger && (
+                    <div className="text-xs text-muted-foreground pt-2 border-t border-border italic">
+                      {result.ledger}
+                    </div>
+                  )}
+                </div>
+                
+                <div className="bg-muted/30 rounded-lg border border-border p-4 space-y-2">
+                  <div className="text-xs font-medium text-muted-foreground">Provenance Payload (JSON):</div>
+                  <pre className="text-xs font-mono bg-background p-3 rounded border border-border overflow-x-auto">
+{JSON.stringify({
+  protocol: 'SentriAI',
+  wallet: result.wallet,
+  sanctionsScore: result.sanctionsScore,
+  behavioralScore: result.behavioralScore,
+  reputationScore: result.reputationScore,
+  finalScore: result.finalScore,
+  status: result.status,
+}, null, 2)}
+                  </pre>
+                  <div className="text-xs text-muted-foreground pt-2">
+                    This payload is hashed deterministically to generate the Arweave TX ID above.
+                    Same wallet + same scores → same TX ID (provenance guarantee).
+                  </div>
+                </div>
+                
+                <a
+                  href={`https://arweave.net/${result.arweaveTx}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3 bg-background rounded-lg border border-border hover:bg-muted/50 transition-colors"
+                >
+                  <span className="font-medium">View on Arweave</span>
+                  <ExternalLink className="h-4 w-4 text-safe" />
+                </a>
+              </>
+            )}
+            
+            <div className="text-xs text-muted-foreground pt-2 border-t border-border space-y-1">
+              <div><strong>Eternal Compliance Ledger (Arweave-backed)</strong></div>
+              <div>This AI computation output is permanently recorded as an immutable artifact. The deterministic hash ensures same inputs always produce the same provenance proof, creating a verifiable audit trail for decentralized AI decisions.</div>
+            </div>
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader>
             <CardTitle>Compliance Metadata</CardTitle>

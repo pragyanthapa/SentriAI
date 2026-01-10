@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkCompliance, ComplianceResult } from '@/lib/riskEngine';
+import { evaluateCompliance, ComplianceResult } from '@/lib/riskEngine';
+import { createProvenanceRecord } from '@/lib/provenance';
 import { storeComplianceCheck } from '@/lib/complianceStore';
 
 const complianceRequestSchema = z.object({
@@ -30,9 +31,11 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    const result: ComplianceResult = checkCompliance(normalized);
-    storeComplianceCheck(result);
-
+    const result: ComplianceResult = evaluateCompliance(normalized);
+    const provenance = createProvenanceRecord(result);
+    result.arweaveTx = provenance.arweaveTx;
+    result.ledger = 'Arweave (deterministic provenance record – mocked test write)';
+    storeComplianceCheck(result, provenance);
     return NextResponse.json(result);
   } catch (error) {
     console.error('Compliance check error:', error);

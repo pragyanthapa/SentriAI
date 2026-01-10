@@ -1,25 +1,41 @@
 
 import type { ComplianceResult } from './riskEngine';
-const complianceChecks: ComplianceResult[] = [];
+import type { ProvenanceRecord } from './provenance';
+interface StoredComplianceCheck extends ComplianceResult {
+  provenance?: ProvenanceRecord;
+}
 
-export function storeComplianceCheck(result: ComplianceResult): void {
+const complianceChecks: StoredComplianceCheck[] = [];
+export function storeComplianceCheck(result: ComplianceResult, provenance?: ProvenanceRecord): void {
+  const storedCheck: StoredComplianceCheck = {
+    ...result,
+    provenance,
+  };
+  
   const index = complianceChecks.findIndex(c => c.wallet === result.wallet);
   if (index >= 0) {
-    complianceChecks[index] = result;
+    complianceChecks[index] = storedCheck;
   } else {
-    complianceChecks.push(result);
+    complianceChecks.push(storedCheck);
   }
-    if (complianceChecks.length > 100) {
+  
+  if (complianceChecks.length > 100) {
     complianceChecks.shift();
   }
 }
 
 export function getAllComplianceChecks(): ComplianceResult[] {
-  return [...complianceChecks].reverse(); 
+  return [...complianceChecks].map(check => {
+    const { provenance, ...result } = check;
+    return result;
+  }).reverse(); 
 }
 
 export function getComplianceCheck(wallet: string): ComplianceResult | undefined {
-  return complianceChecks.find(c => c.wallet === wallet.toLowerCase());
+  const check = complianceChecks.find(c => c.wallet === wallet.toLowerCase());
+  if (!check) return undefined;
+  const { provenance, ...result } = check;
+  return result;
 }
 
 export function getDashboardStats() {

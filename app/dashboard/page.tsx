@@ -60,7 +60,6 @@ export default function DashboardPage() {
     }
     
     fetchDashboardData()
-    // Refresh every 5 seconds
     const interval = setInterval(fetchDashboardData, 5000)
     return () => clearInterval(interval)
   }, [])
@@ -141,7 +140,7 @@ export default function DashboardPage() {
                   <TableHead>Wallet</TableHead>
                   <TableHead>Score</TableHead>
                   <TableHead>Status</TableHead>
-                  <TableHead>Arweave Proof</TableHead>
+                  <TableHead>Ledger Proof | Arweave TX</TableHead>
                   <TableHead>Time</TableHead>
                 </TableRow>
               </TableHeader>
@@ -163,16 +162,19 @@ export default function DashboardPage() {
                       <TableCell>{getStatusBadge(item.status)}</TableCell>
                       <TableCell>
                         {item.arweaveTx ? (
-                          <a
-                            href={`https://arweave.net/${item.arweaveTx}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-1 text-safe hover:underline text-sm"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <span>View</span>
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
+                          <div className="space-y-1">
+                            <div className="text-xs text-muted-foreground">Deterministic Proof</div>
+                            <a
+                              href={`https://arweave.net/${item.arweaveTx}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center space-x-1 text-safe hover:underline text-sm font-mono"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span className="truncate max-w-[120px]">{item.arweaveTx}</span>
+                              <ExternalLink className="h-3 w-3 flex-shrink-0" />
+                            </a>
+                          </div>
                         ) : (
                           <span className="text-muted-foreground text-sm">Pending</span>
                         )}

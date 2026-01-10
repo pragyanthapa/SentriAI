@@ -253,30 +253,64 @@ export default function DemoPage() {
                 </div>
 
                 <div className="pt-4 border-t border-border">
-                  <div className="flex items-center justify-between p-4 bg-background rounded-lg border border-border">
-                    <div>
-                      <div className="text-sm font-medium">Immutable compliance record created</div>
-                      <div className="text-xs text-muted-foreground mt-1">
-                        Eternal Compliance Ledger (Arweave-backed)
-                      </div>
-                      {result.ledger && (
-                        <div className="text-xs text-muted-foreground mt-1 italic">
-                          {result.ledger}
+                  <Card className="border-safe/20 bg-safe/5">
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-lg flex items-center space-x-2">
+                        <span>🧾</span>
+                        <span>Provenance Record Created</span>
+                      </CardTitle>
+                      <CardDescription>
+                        Deterministic AI Compute Proof
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="bg-background rounded-lg border border-border p-4 space-y-2">
+                        <div className="text-sm font-medium">Immutable compliance record created</div>
+                        <div className="text-xs text-muted-foreground">
+                          Eternal Compliance Ledger (Arweave-backed)
                         </div>
+                        {result.ledger && (
+                          <div className="text-xs text-muted-foreground mt-1 italic">
+                            {result.ledger}
+                          </div>
+                        )}
+                      </div>
+                      {result.arweaveTx && (
+                        <a
+                          href={`https://arweave.net/${result.arweaveTx}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-3 bg-background rounded-lg border border-border hover:bg-muted/50 transition-colors"
+                        >
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-medium">Arweave TX:</span>
+                            <span className="text-xs font-mono text-muted-foreground">
+                              {result.arweaveTx.substring(0, 20)}...
+                            </span>
+                          </div>
+                          <ExternalLink className="h-4 w-4 text-safe" />
+                        </a>
                       )}
-                    </div>
-                    {result.arweaveTx && (
-                      <a
-                        href={`https://arweave.net/${result.arweaveTx}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-safe hover:underline"
-                      >
-                        <span className="text-sm font-medium">View Arweave Proof</span>
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
+                      <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                        <span className="flex items-center space-x-1">
+                          <CheckCircle2 className="h-3 w-3 text-safe" />
+                          <span>Deterministic</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <CheckCircle2 className="h-3 w-3 text-safe" />
+                          <span>Immutable</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <CheckCircle2 className="h-3 w-3 text-safe" />
+                          <span>Auditable</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <CheckCircle2 className="h-3 w-3 text-safe" />
+                          <span>Arweave-backed</span>
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </CardContent>
             </Card>
