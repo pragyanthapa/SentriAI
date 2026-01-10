@@ -3,8 +3,6 @@
 > **"DeFi fails because of trust. SentriAI makes compliance irreversible."**  
 > *Every wallet checked. Every decision forever.*
 
-Built for **Amadeus Genesis Hack** • Target: **Top 3 Ideathon ($15K)** + **Arweave Bonus ($5K)**
-
 **Live URL:** (https://sentri-ai-hazel.vercel.app/)
 
 ---
