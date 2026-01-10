@@ -16,7 +16,7 @@ export default function Home() {
             SENTRI AI
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground font-light">
-            DeFi's Autonomous Compliance Sentinel
+            DeFi&apos;s Autonomous Compliance Sentinel
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto pt-4">
             Every decision verified. Every action remembered. Forever.
@@ -205,7 +205,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Future versions will leverage Amadeus's Universal Proof of Work (uPoW) 
+                Future versions will leverage Amadeus&apos;s Universal Proof of Work (uPoW) 
                 for autonomous enforcement, where non-compliant wallets are automatically 
                 blocked at the protocol level—no human intervention required.
               </p>

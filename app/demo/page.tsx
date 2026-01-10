@@ -102,7 +102,7 @@ export default function DemoPage() {
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">Live Compliance Demo</h1>
           <p className="text-xl text-muted-foreground">
-            Enter any wallet address to see SentriAI's deterministic agents in action
+            Enter any wallet address to see SentriAI&apos;s deterministic agents in action
           </p>
           <div className="flex flex-wrap gap-2 justify-center text-sm text-muted-foreground">
             <span>Try any Ethereum address, or examples:</span>
