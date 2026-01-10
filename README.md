@@ -501,7 +501,7 @@ Built for **Amadeus Genesis Hack** by Pragyan Thapa.
 
 **Live URL:** [will deploy soon]
 
-**GitHub:** [Repository URL]
+**GitHub:** [https://github.com/pragyanthapa/SentriAI]
 
 ---
 
