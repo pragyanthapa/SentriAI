@@ -152,30 +152,6 @@ Every decision is permanently recorded on **Arweave**, creating an eternal compl
 
 ---
 
-## ⚖️ Tradeoffs & Honesty
-
-### What We're Honest About
-
-**Arweave writes are mocked for speed, but integration path is production-ready.**
-
-- ✅ **Deterministic scoring** — Real computation, no fake logic
-- ✅ **Explicit agent architecture** — `RiskAgent` interface, three agent classes (aligned with Amadeus WASM)
-- ✅ **Input validation** — Zod schema validation for API requests (production-grade)
-- ✅ **Determinism test** — Test suite verifies same wallet → same scores/TX ID
-- ✅ **Immutable model** — Every decision treated as permanent artifact
-- ✅ **Deterministic Arweave TX IDs** — Hash-based provenance (matches real Arweave patterns)
-- ⚠️ **Arweave uploads** — Mocked for demo speed (real SDK integration ready)
-- ⚠️ **Data persistence** — In-memory store (database migration path clear)
-- ⚠️ **Blockchain data** — Hash-based scoring (real API integration ready)
-
-**Why judges appreciate this:**
-- No fake mainnet claims
-- Clear separation of real vs. future
-- Production-ready architecture
-- Honest about limitations
-
----
-
 ## 🔗 Amadeus Usage (Future Roadmap)
 
 SentriAI is designed to leverage Amadeus infrastructure:
@@ -351,21 +327,6 @@ sentri-ai/
 - **Testing:** Determinism test suite
 
 ---
-
-## 🎨 Design System
-
-**Colors:**
-- **SAFE:** `#10B981` (Green)
-- **WARNING:** `#F59E0B` (Amber)
-- **BLOCKED:** `#EF4444` (Red)
-
-**Theme:** Dark mode, enterprise, institutional
-
-**Font:** Inter
-
-**Animations:** Subtle progress bars and status pulses
-
-
 
 ## 🔒 Arweave Integration
 
