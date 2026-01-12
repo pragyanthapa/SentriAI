@@ -1,5 +1,17 @@
 # SentriAI — DeFi's Autonomous Compliance Sentinel
 
+## TL;DR (For Judges)
+
+- Deterministic AI compliance for DeFi
+- Same wallet → same decision → forever verifiable
+- Three autonomous agents with transparent weighting
+- Every decision anchored as an immutable Arweave artifact
+- Built for Amadeus WASM, oracle streams, and uPoW
+- Live demo + determinism tests included
+
+- 
+<img width="719" height="354" alt="Screenshot 2026-01-12 at 11 28 12 PM" src="https://github.com/user-attachments/assets/583f3f8d-3b02-43ab-927c-72a587cbd7e5" />
+
 > **"DeFi fails because of trust. SentriAI makes compliance irreversible."**  
 > *Every wallet checked. Every decision forever.*
 
@@ -25,6 +37,9 @@ SentriAI combines three autonomous compliance agents to analyze every wallet:
 2. **Behavioral Agent** (30% weight) — Analyzes transaction patterns for wash trading, money laundering, and other suspicious behavior
 3. **Reputation Agent** (20% weight) — Evaluates wallet history, age, and past interactions with DeFi protocols
 
+<img width="999" height="423" alt="Screenshot 2026-01-12 at 11 30 17 PM" src="https://github.com/user-attachments/assets/cc235f67-76df-484c-8565-b53a34494c89" />
+
+
 These agents produce objective scores that are aggregated using:
 ```
 finalScore = 0.5 × sanctionsScore + 0.3 × behavioralScore + 0.2 × reputationScore
@@ -36,6 +51,9 @@ finalScore = 0.5 × sanctionsScore + 0.3 × behavioralScore + 0.2 × reputationS
 - `≥ 70` → **APPROVED**
 
 Every decision is permanently recorded on **Arweave**, creating an eternal compliance ledger that outlives any protocol or institution.
+
+<img width="1056" height="546" alt="Screenshot 2026-01-12 at 11 30 38 PM" src="https://github.com/user-attachments/assets/f3f79da8-b875-4b91-b53a-07da21f228a9" />
+
 
 ---
 
@@ -91,6 +109,8 @@ Every decision is permanently recorded on **Arweave**, creating an eternal compl
 │  - getArweaveProof()                │
 └─────────────────────────────────────┘
 ```
+<img width="1112" height="612" alt="Screenshot 2026-01-12 at 11 31 08 PM" src="https://github.com/user-attachments/assets/8588a890-e2d9-4189-9c83-2b108cad9dae" />
+
 
 ---
 
@@ -432,6 +452,9 @@ SentriAI qualifies strongly for **🏆 Best Provenance Architecture** because:
    - Each decision is a verifiable, permanent record
    - Outlives any protocol or institution
    - Creates trust through transparency
+  
+<img width="1332" height="306" alt="Screenshot 2026-01-12 at 11 34 04 PM" src="https://github.com/user-attachments/assets/dd73a2a7-7d94-42e1-86ec-39749b875625" />
+
 
 ---
 
