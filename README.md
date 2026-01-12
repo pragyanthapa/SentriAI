@@ -9,7 +9,6 @@
 - Built for Amadeus WASM, oracle streams, and uPoW
 - Live demo + determinism tests included
 
-- 
 <img width="719" height="354" alt="Screenshot 2026-01-12 at 11 28 12 PM" src="https://github.com/user-attachments/assets/583f3f8d-3b02-43ab-927c-72a587cbd7e5" />
 
 > **"DeFi fails because of trust. SentriAI makes compliance irreversible."**  
@@ -146,6 +145,8 @@ Every decision is permanently recorded on **Arweave**, creating an eternal compl
 - **Immutable artifact model** — Each decision treated as permanent record
 - **Strengthens Arweave bonus** — Deterministic TX IDs enable independent verification without Arweave network
 
+<img width="1055" height="679" alt="Screenshot 2026-01-12 at 11 41 06 PM" src="https://github.com/user-attachments/assets/dd6e0d1d-13e0-4297-ab4d-9a7ccf5fab39" />
+
 ---
 
 ## 🔮 What Is Future (Amadeus Integration)
@@ -170,6 +171,7 @@ Every decision is permanently recorded on **Arweave**, creating an eternal compl
 - Non-compliant wallets automatically blocked at protocol level
 - No human intervention required
 
+
 ---
 
 ## 🔗 Amadeus Usage (Future Roadmap)
@@ -190,6 +192,7 @@ Every compliance decision will generate a cryptographic state proof from Amadeus
 
 ### 🔮 uPoW (Future Enhancement)
 Future versions will leverage Amadeus's Universal Proof of Work (uPoW) for autonomous enforcement, where non-compliant wallets are automatically blocked at the protocol level—no human intervention required.
+<img width="1012" height="523" alt="Screenshot 2026-01-12 at 11 39 29 PM" src="https://github.com/user-attachments/assets/c6c1f505-773f-403f-825c-1fdc90ac96c5" />
 
 ---
 
@@ -215,6 +218,9 @@ Assuming:
 ### Total Addressable Market
 With **$2B in institutional capital** currently blocked from DeFi, SentriAI addresses a massive compliance gap. As regulatory clarity improves and institutional adoption accelerates, the addressable market expands exponentially.
 
+<img width="1002" height="607" alt="Screenshot 2026-01-12 at 11 41 53 PM" src="https://github.com/user-attachments/assets/b563161d-c81d-445c-a05d-e0687d04f8f1" />
+
+
 ---
 
 ## 🎬 Live Demo
@@ -233,7 +239,7 @@ With **$2B in institutional capital** currently blocked from DeFi, SentriAI addr
 
 ### Deterministic Scoring
 
-**Same wallet → Same result** (judge confidence)
+**Same wallet → Same result**
 
 Every wallet address produces consistent scores through deterministic hash-based computation. No hardcoded values—all scores computed in real-time.
 
@@ -258,6 +264,8 @@ Try any Ethereum address. Scores are computed deterministically:
 - Red flags list
 - Arweave proof link
 - Compliance metadata
+  
+<img width="1232" height="740" alt="Screenshot 2026-01-12 at 11 44 28 PM" src="https://github.com/user-attachments/assets/6c0adb8a-7909-4106-9ab6-644950315341" />
 
 ---
 
